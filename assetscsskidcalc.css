@@ -1,0 +1,56 @@
+/* Import Themes */
+@import url('themes/theme-default.css');
+@import url('themes/theme-forest.css');
+@import url('themes/theme-ocean.css');
+@import url('themes/theme-galaxy.css');
+@import url('themes/theme-sunset.css');
+
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Login Form Styles */
+.login-form, .kidcalc-section, .info-bar {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.buttons button {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#resultBox {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-form, .kidcalc-section, .info-bar {
+        padding: 10px;
+    }
+    .buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

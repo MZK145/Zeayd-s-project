@@ -1,0 +1,44 @@
+/* Forest Theme */
+body.forest-theme {
+    background-color: #2e8b57;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://i.pinimg.com/736x/14/10/38/14103834d23e01505650e02e2b4fd81b.jpg');
+}
+
+.forest-theme .login-form,
+.forest-theme .kidcalc-section,
+.forest-theme .info-bar {
+    background-color: #3cb371;
+    color: #fff;
+}
+
+.forest-theme .buttons button {
+    background-color: #228b22;
+    color: white;
+}
+
+.forest-theme .buttons button:hover {
+    background-color: #1e7a1e;
+}
+
+/* Decorative Logo */
+.forest-theme .info-bar::before {
+    content: "";
+    display: block;
+    background-image: url('https://i.pinimg.com/236x/e4/22/7e/e4227e02eb9aefd5e184a81994ece42b.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+}
+
+
+
+
+
+
+
+

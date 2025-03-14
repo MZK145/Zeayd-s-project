@@ -1,0 +1,51 @@
+/* Ocean Theme */
+body.ocean-theme {
+    background-color: #1e90ff;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://i.pinimg.com/236x/a8/00/25/a8002516c60d1dc8618752722f9b1322.jpg');
+}
+
+.ocean-theme .login-form,
+.ocean-theme .kidcalc-section,
+.ocean-theme .info-bar {
+    background-color: #87ceeb;
+    color: #fff;
+}
+
+.ocean-theme .buttons button {
+    background-color: #4682b4;
+    color: white;
+}
+
+.ocean-theme .buttons button:hover {
+    background-color: #3a6a8e;
+}
+
+/* Decorative Logo */
+.ocean-theme .info-bar::before {
+    content: "";
+    display: block;
+    background-image: url('https://i.pinimg.com/236x/5e/e2/6b/5ee26bb99b59d86e722660d2efc9f401.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+/* Galaxy Theme */
+body.galaxy-theme {
+    background-color: #0b3d91;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://i.pinimg.com/474x/fe/d8/b2/fed8b2091b73ad53ee45494826dc9fd1.jpg');
+}
+
+.galaxy-theme .login-form,
+.galaxy-theme .kidcalc-section,
+.galaxy-theme .info-bar {
+    background-color: #1c1c3d;
+    color: #fff;
+}
+
+.galaxy-theme .buttons button {
+    background-color: #4b0082;
+    color: white;
+}
+
+.galaxy-theme .buttons button:hover {
+    background-color: #3a0066;
+}
+
+/* Decorative Logo */
+.galaxy-theme .info-bar::before {
+    content: "";
+    display: block;
+    background-image: url('https://i.pinimg.com/236x/73/95/55/7395559c4fce054508e021d5c13fa616.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+}
+
+
+
+
+
+
+
+
+

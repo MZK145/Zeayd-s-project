@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidCalc - Fun Learning</title>
+    <link rel="stylesheet" href="assets/css/kidcalc.css"> <!-- Main CSS -->
+</head>
+<body class="default-theme"> <!-- Default theme -->
+
+    <!-- Login Form -->
+    <div class="login-form">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <select id="themeSelector">
+                <option value="default-theme">Default Theme</option>
+                <option value="forest-theme">Forest Theme</option>
+                <option value="ocean-theme">Ocean Theme</option>
+                <option value="galaxy-theme">Galaxy Theme</option>
+                <option value="sunset-theme">Sunset Theme</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Info Bar -->
+    <div class="info-bar">
+        <h2>Welcome, <span id="welcomeName">Guest</span>!</h2>
+        <p>Correct: <span id="correctCount">0</span> | Incorrect: <span id="incorrectCount">0</span></p>
+        <p>Time Left: <span id="timer">60</span>s</p>
+    </div>
+
+    <!-- KidCalc Section -->
+    <div class="kidcalc-section">
+        <h2>KidCalc</h2>
+        <div id="expressionBox">0</div>
+        <input type="text" id="answerBox" placeholder="Enter your answer">
+        <div class="buttons">
+            <button onclick="addToExpression('1')">1</button>
+            <button onclick="addToExpression('2')">2</button>
+            <button onclick="addToExpression('3')">3</button>
+            <button onclick="addToExpression('4')">4</button>
+            <button onclick="addToExpression('5')">5</button>
+            <button onclick="addToExpression('6')">6</button>
+            <button onclick="addToExpression('7')">7</button>
+            <button onclick="addToExpression('8')">8</button>
+            <button onclick="addToExpression('9')">9</button>
+            <button onclick="addToExpression('0')">0</button>
+            <button onclick="addToExpression('+')">+</button>
+            <button onclick="addToExpression('-')">-</button>
+            <button onclick="addToExpression('*')">*</button>
+            <button onclick="addToExpression('/')">/</button>
+            <button onclick="clearExpression()">Clear</button>
+            <button onclick="calculateResult()">Submit</button>
+        </div>
+        <div id="resultBox"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const selectedTheme = document.getElementById("themeSelector").value;
+            document.body.className = selectedTheme; // Apply the selected theme
+            document.getElementById("welcomeName").textContent = document.getElementById("name").value; // Update welcome message
+        });
+
+        // Calculator Logic
+        let correctCount = 0;
+        let incorrectCount = 0;
+
+        function addToExpression(value) {
+            const expressionBox = document.getElementById("expressionBox");
+            let currentExpression = expressionBox.textContent;
+
+            if (currentExpression === "0") {
+                expressionBox.textContent = value;
+            } else {
+                expressionBox.textContent += value;
+            }
+        }
+
+        function clearExpression() {
+            document.getElementById("expressionBox").textContent = "0";
+            document.getElementById("resultBox").textContent = "";
+        }
+
+        function calculateResult() {
+            const expressionBox = document.getElementById("expressionBox");
+            const resultBox = document.getElementById("resultBox");
+            const expression = expressionBox.textContent;
+
+            try {
+                const result = eval(expression);
+                resultBox.textContent = "Result: " + result;
+                correctCount++;
+                document.getElementById("correctCount").textContent = correctCount;
+            } catch (error) {
+                resultBox.textContent = "Error!";
+                incorrectCount++;
+                document.getElementById("incorrectCount").textContent = incorrectCount;
+            }
+
+            expressionBox.textContent = "0"; // Reset expression box
+        }
+
+        // Timer Logic
+        let timeLeft = 60;
+        const timerInterval = setInterval(() => {
+            timeLeft--;
+            document.getElementById("timer").textContent = timeLeft;
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                alert("Time's up!");
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

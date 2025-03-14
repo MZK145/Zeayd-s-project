@@ -1,0 +1,48 @@
+/* Sunset Theme */
+body.sunset-theme {
+    background-color: #ff7f50;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://i.pinimg.com/736x/7c/00/4f/7c004f80186a1f32a19d645df0eefc94.jpg');
+}
+
+.sunset-theme .login-form,
+.sunset-theme .kidcalc-section,
+.sunset-theme .info-bar {
+    background-color: #ff6347;
+    color: #fff;
+}
+
+.sunset-theme .buttons button {
+    background-color: #ff4500;
+    color: white;
+}
+
+.sunset-theme .buttons button:hover {
+    background-color: #cc3700;
+}
+
+/* Decorative Logo */
+.sunset-theme .info-bar::before {
+    content: "";
+    display: block;
+    background-image: url('https://i.pinimg.com/236x/f4/04/71/f4047136eed63d88be00b61a80c00502.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

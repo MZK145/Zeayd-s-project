@@ -1,0 +1,37 @@
+/* Default Theme */
+body.default-theme {
+    background-color: #f9f9f9 !important;
+    color: #333 !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-image: url('https://i.pinimg.com/236x/2c/17/1b/2c171bb02f5141f8288953d93ad84cdb.jpg') !important;
+}
+
+.default-theme .login-form,
+.default-theme .kidcalc-section,
+.default-theme .info-bar {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.default-theme .buttons button {
+    background-color: #007bff;
+    color: white;
+}
+
+.default-theme .buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Decorative Logo */
+.default-theme .info-bar::before {
+    content: "";
+    display: block;
+    background-image: url('https://i.pinimg.com/236x/00/5c/77/005c777af65057b7deb2870266ea9078.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+}
+
